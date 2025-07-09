@@ -63,6 +63,8 @@ sudo ./setup.sh
 
 ---
 - If you getting shodan not found error then for debian based distro install `python3-shodan` and for arch based distro install `python-shodan`.
+- One more thing before runt shodan commands you have to give it your api key. You can finde it on here -> [shodan](https://shodan.io) First signup if you have no account then go to account -> there you can see on Overview section -> `API KEY` just click on show and copy that. Then go to your terminal and type `shodan init <paste your api key>`. You fix your issue.
+- If you getting `tgpt` command not found errot then just install from `mahakal` -> `cd ai` -> Then for debian `intdeb` and for arch or arch based distro `intarch`.
 
 ## 💻 Supported OS
 
