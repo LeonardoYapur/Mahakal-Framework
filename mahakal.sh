@@ -274,8 +274,13 @@ run_user_commands() {
                 current_section="HOME"
                 ;;
             "cd anony")
-                current_section="ANON"
+                current_section="ANONY"
                 traffic_anony
+                current_section="HOME"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="HOME"
                 ;;
             "banner")
@@ -321,7 +326,8 @@ run_user_commands() {
                 echo "     >>>  23.  ffuf        - Fuzzing tool"
                 echo "     >>>  24.  unic        - Unicornscan for network scanning"
                 echo "     >>>  25.  enumli      - Enumeration tool for Linux systems"
-                echo "     >>>  26.  sqlmap      - SQL injection and database takeover tool"             
+                echo "     >>>  26.  sqlmap      - SQL injection and database takeover tool"  
+                echo "     >>>  27.  ufw         - Manage firewall rules"           
                 echo -e "\033[1;31m" "\n->> Usage: cd ai (TO ENTER AI SECTION) \033[0m" # Red color
                 echo ""
                 ;;
@@ -406,8 +412,8 @@ manage_nmap_commands() {
                 check_sys_status
                 current_section="NMAP"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
                 current_section="NMAP"
                 ;;
@@ -503,6 +509,11 @@ manage_nmap_commands() {
                 ;;
             "jai mahakal")
                 current_section="HOME"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
+                current_section="NMAP"
                 ;;
         esac
 
@@ -783,8 +794,8 @@ manage_curl_commands() {
                 check_sys_status
                 current_section="CURL"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
                 current_section="CURL"
                 ;;
@@ -876,6 +887,11 @@ manage_curl_commands() {
             "cd sqlmap")
                 current_section="SQLMAP"
                 manage_sqlmap_commands
+                current_section="CURL"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="CURL"
                 ;;
         esac
@@ -1073,8 +1089,8 @@ manage_wpscan_commands() {
                 check_sys_status
                 current_section="WPSCAN"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
                 current_section="WPSCAN"
                 ;;
@@ -1166,6 +1182,11 @@ manage_wpscan_commands() {
             "cd sqlmap")
                 current_section="SQLMAP"
                 manage_sqlmap_commands
+                current_section="WPSCAN"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="WPSCAN"
                 ;;
         esac
@@ -1361,8 +1382,8 @@ manage_whatweb_commands() {
                 check_sys_status
                 current_section="WHATWEB"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
                 current_section="WHATWEB"
                 ;;
@@ -1454,6 +1475,11 @@ manage_whatweb_commands() {
             "cd sqlmap")
                 current_section="SQLMAP"
                 manage_sqlmap_commands
+                current_section="WHATWEB"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="WHATWEB"
                 ;;
         esac
@@ -1639,8 +1665,8 @@ manage_wafw00f_commands() {
                 check_sys_status
                 current_section="WAFW00F"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
                 current_section="WAFW00F"
                 ;;
@@ -1727,6 +1753,11 @@ manage_wafw00f_commands() {
             "cd sqlmap")
                 current_section="SQLMAP"
                 manage_sqlmap_commands
+                current_section="WAFW00F"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="WAFW00F"
                 ;;
         esac
@@ -1877,8 +1908,8 @@ manage_dnsrecon_commands() {
                 check_sys_status
                 current_section="DNSRECON"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
                 current_section="DNSRECON"
                 ;;
@@ -1965,6 +1996,11 @@ manage_dnsrecon_commands() {
             "cd sqlmap")
                 current_section="SQLMAP"
                 manage_sqlmap_commands
+                current_section="DNSRECON"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="DNSRECON"
                 ;;
         esac
@@ -2146,8 +2182,8 @@ manage_dnsenum_commands() {
                 check_sys_status
                 current_section="DNSENUM"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
                 current_section="DNSENUM"
                 ;;
@@ -2214,6 +2250,11 @@ manage_dnsenum_commands() {
             "cd sqlmap")
                 current_section="SQLMAP"
                 manage_sqlmap_commands
+                current_section="DNSENUM"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="DNSENUM"
                 ;;
         esac 
@@ -2475,9 +2516,14 @@ manage_subfinder_commands() {
                 check_sys_status
                 current_section="SUBFINDER"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="SUBFINDER"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="SUBFINDER"
                 ;;
         esac
@@ -2722,9 +2768,14 @@ manage_httprobe_commands() {
                 check_sys_status
                 current_section="HTTPROBE"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="HTTPROBE"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="HTTPROBE"
                 ;;
         esac
@@ -3011,9 +3062,14 @@ manage_whois_commands() {
                 check_sys_status
                 current_section="WHOIS"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="WHOIS"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="WHOIS"
                 ;;
         esac
@@ -3211,9 +3267,14 @@ manage_amass_commands() {
                 check_sys_status
                 current_section="AMASS"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="AMASS"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="AMASS"
                 ;;
         esac
@@ -3417,9 +3478,14 @@ manage_hydra_commands() {
                 check_sys_status
                 current_section="HYDRA"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="HYDRA"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="HYDRA"
                 ;;
         esac
@@ -3614,9 +3680,14 @@ manage_medusa_commands() {
                 check_sys_status
                 current_section="MEDUSA"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="MEDUSA"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="MEDUSA"
                 ;;
         esac
@@ -3810,9 +3881,14 @@ manage_john_commands() {
                 check_sys_status
                 current_section="JOHN"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="JOHN"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="JOHN"
                 ;;
         esac
@@ -4051,9 +4127,14 @@ manage_hashcat_commands() {
                 check_sys_status
                 current_section="HASHCAT"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="HASHCAT"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="HASHCAT"
                 ;;
         esac
@@ -4291,9 +4372,14 @@ manage_gobuster_commands() {
                 check_sys_status
                 current_section="GOBUSTER"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="GOBUSTER"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="GOBUSTER"
                 ;;
         esac
@@ -4506,9 +4592,14 @@ manage_ffuf_commands() {
                 check_sys_status
                 current_section="FFUF"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="FFUF"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="FFUF"
                 ;;
         esac
@@ -4709,9 +4800,14 @@ manage_nikto_commands() {
                 check_sys_status
                 current_section="NIKTO"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="NIKTO"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="NIKTO"
                 ;;
         esac
@@ -4969,9 +5065,14 @@ manage_masscan_commands() {
                 check_sys_status
                 current_section="MASSCAN"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="MASSCAN"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="MASSCAN"
                 ;;
         esac
@@ -5186,9 +5287,14 @@ manage_unicornscan_commands() {
                 check_sys_status
                 current_section="UNICORNSCAN"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="UNICORNSCAN"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="UNICORNSCAN"
                 ;;
         esac
@@ -5380,9 +5486,14 @@ manage_enum4linux_commands() {
                 check_sys_status
                 current_section="ENUM4LINUX-NG"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="ENUM4LINUX-NG"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="ENUM4LINUX-NG"
                 ;;
         esac
@@ -5592,9 +5703,14 @@ manage_sqlmap_commands() {
                 check_sys_status
                 current_section="SQLMAP"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="SQLMAP"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="SQLMAP"
                 ;;
         esac
@@ -5912,9 +6028,14 @@ chat_ai() {
                 check_sys_status
                 current_section="AI"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="AI"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="AI"
                 ;;
         esac
@@ -6257,9 +6378,14 @@ check_sys_status() {
                 chat_ai
                 current_section="CSS"
                 ;;
-            "cd anon")
-                current_section="ANON"
+            "cd anony")
+                current_section="ANONY"
                 traffic_anony
+                current_section="CSS"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="CSS"
                 ;;
         esac
@@ -6460,8 +6586,7 @@ traffic_anony() {
         # Add the command to history
         history -s "$option"
 
-        case $option
-         in
+        case $option in
             "cd ..")
                 return
                 ;;
@@ -6589,6 +6714,11 @@ traffic_anony() {
             "cd css")
                 current_section="CSS"
                 check_sys_status
+                current_section="ANONY"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
                 current_section="ANONY"
                 ;;
         esac
@@ -6733,6 +6863,460 @@ traffic_anony() {
                 echo -e "\033[1;31m"
                 echo "-->> Invalid Command. Please use 'help/ls' to see the commands."
                 echo -e "\033[0m"  # Reset color
+                ;;
+        esac
+
+        # Save history to file
+        history -a "$HISTORY_FILE"
+    done
+}
+
+# Function to manage UFW firewall rules
+manage_firewall() {
+    local current_section="UFW"
+
+    # Load history from file if it exists
+    if [[ -f "$HISTORY_FILE" ]]; then
+        history -r "$HISTORY_FILE"
+    fi
+
+    while true; do
+        # Read input with readline support
+        read -e -p " {LINUX-DEFENDER}-{${current_section}}-->> " option
+
+        # Exit the loop if the user types 'exit'
+        if [[ "$option" == "exit" ]]; then
+            break
+        fi
+
+        # If the input is empty, continue to the next iteration
+        if [[ -z "$option" ]]; then
+            continue
+        fi
+
+        # Add the command to history
+        history -s "$option"
+
+        case $option in
+            "cd ..")
+                return  # Exit the firewall management section and go back to the main menu
+                ;;
+            "mip")
+                echo -e "\033[1;32m"  # Green color
+                echo "Your IP address is: $(curl -s ifconfig.me)"
+                echo -e "\033[0m"  # Reset color
+                log_message "INFO" "User checked IP address"
+                ;;
+            "cd nmap")
+                current_section="NMAP"
+                manage_nmap_commands
+                current_section="UFW"
+                ;;
+            "cd curl")
+                current_section="CURL"
+                manage_curl_commands
+                current_section="UFW"
+                ;;
+            "cd whatweb")
+                current_section="WHATWEB"
+                manage_whatweb_commands
+                current_section="UFW"
+                ;;
+            "cd wpscan")
+                current_section="WPSCAN"
+                manage_wpscan_commands
+                current_section="UFW"
+                ;;
+            "cd waf")
+                current_section="WAFW00F"
+                manage_wafw00f_commands
+                current_section="UFW"
+                ;;
+            "cd subfinder")
+                current_section="SUBFINDER"
+                manage_subfinder_commands
+                current_section="UFW"
+                ;;
+            "cd dnsrecon")
+                current_section="DNSRECON"
+                manage_dnsrecon_commands
+                current_section="UFW"
+                ;;
+            "cd dnsenum")
+                current_section="DNSENUM"
+                manage_dnsenum_commands
+                current_section="UFW"
+                ;;
+            "cd httprobe")
+                current_section="HTTPROBE"
+                manage_httprobe_commands
+                current_section="UFW"
+                ;;
+            "cd whois")
+                current_section="WHOIS"
+                manage_whois_commands
+                current_section="UFW"
+                ;;
+            "cd amass")
+                current_section="AMASS"
+                manage_amass_commands
+                current_section="UFW"
+                ;;
+            "cd hydra")
+                current_section="HYDRA"
+                manage_hydra_commands
+                current_section="UFW"
+                ;;
+            "cd medusa")
+                current_section="MEDUSA"
+                manage_medusa_commands
+                current_section="UFW"
+                ;;
+            "cd john")
+                current_section="JOHN"
+                manage_john_commands
+                current_section="UFW"
+                ;;
+            "cd hashcat")
+                current_section="HASHCAT"
+                manage_hashcat_commands
+                current_section="UFW"
+                ;;
+            "cd gobuster")
+                current_section="GOBUSTER"
+                manage_gobuster_commands
+                current_section="UFW"
+                ;;
+            "cd ffuf")
+                current_section="FFUF"
+                manage_ffuf_commands
+                current_section="UFW"
+                ;;
+            "cd nikto")
+                current_section="NIKTO"
+                manage_nikto_commands
+                current_section="UFW"
+                ;;
+            "cd masscan")
+                current_section="MASSCAN"
+                manage_masscan_commands
+                current_section="UFW"
+                ;;
+            "cd unic")
+                current_section="UNICORNSCAN"
+                manage_unicornscan_commands
+                current_section="UFW"
+                ;;
+            "cd enumli")
+                current_section="ENUM4LINUX"
+                manage_enum4linux_commands
+                current_section="UFW"
+                ;;
+            "cd sqlmap")
+                current_section="SQLMAP"
+                manage_sqlmap_commands
+                current_section="UFW"
+                ;;
+            "cd ai")
+                current_section="AI"
+                chat_ai
+                current_section="UFW"
+                ;;
+            "cd css")
+                current_section="CSS"
+                check_sys_status
+                current_section="UFW"
+                ;;
+            "cd anony")
+                current_section="ANONY"
+                traffic_anony
+                current_section="UFW"
+                ;;
+        esac
+
+        case $option in
+            "enable")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-ON}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw enable
+                log_message "INFO" "UFW enabled."
+                send_alert "UFW has been enabled."
+                ;;
+            "disable")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-OFF}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw disable
+                log_message "INFO" "UFW disabled."
+                send_alert "UFW has been disabled."
+                ;;
+            "assh")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-ALLOW-SSH}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw allow ssh
+                log_message "INFO" "SSH allowed through UFW."
+                send_alert "SSH has been allowed through UFW."
+                ;;
+            "dssh")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-DENY-SSH}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw deny ssh
+                log_message "INFO" "SSH denied through UFW."
+                send_alert "SSH has been denied through UFW."
+                ;;
+            "ahttp")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-ALLOW-HTTP}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw allow http
+                log_message "INFO" "HTTP allowed through UFW."
+                send_alert "HTTP has been allowed through UFW."
+                ;;
+            "dhttp")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-DENY-HTTP}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw deny http
+                log_message "INFO" "HTTP denied through UFW."
+                send_alert "HTTP has been denied through UFW."
+                ;;
+            "ahttps")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-ALLOW-HTTPS}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw allow https
+                log_message "INFO" "HTTPS allowed through UFW."
+                send_alert "HTTPS has been allowed through UFW."
+                ;;
+            "dhttps")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-DENY-HTTPS}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw deny https
+                log_message "INFO" "HTTPS denied through UFW."
+                send_alert "HTTPS has been denied through UFW."
+                ;;
+            "statv")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-STATUS-VERBOSE}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw status verbose
+                ;;
+            "statn")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-STATUS-NUMBERED}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw status numbered
+                ;;
+            "urest")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-RESETER}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw reset
+                ;;
+            "uload")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-STATUS-NUMBERED}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw reload
+                ;;
+            "aftp")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-ALLOW-FTP}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw allow ftp
+                log_message "INFO" "FTP allowed through UFW."
+                send_alert "FTP has been allowed through UFW."
+                ;;
+            "dftp")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-DENY-FTP}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw allow ftp
+                log_message "INFO" "FTP denied through UFW."
+                send_alert "FTP has been denied through UFW."
+                ;;
+            "deny-all")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-DENY-ALL}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw default deny
+                log_message "INFO" "All traffic denied by default."
+                send_alert "All traffic is now denied by default."
+                ;;
+            "den-in")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-DENY-INCOMING}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw default deny incoming
+                log_message "INFO" "All incoming traffic denied by default."
+                send_alert "All incoming traffic is now denied by default."
+                ;;
+            "alw-out")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-ALLOW-OUTGOING}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw default allow outgoing
+                log_message "INFO" "Outgoing traffic allowed by default."
+                send_alert "Outgoing traffic is now allowed by default."
+                ;;
+            "den-out")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-DENY-OUTGOING}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw deny outgoing
+                log_message "INFO" "Outgoing traffic denied."
+                send_alert "Outgoing traffic has been denied."
+                ;;
+            "aping")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-ALLOW-PING}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw allow proto icmp
+                log_message "INFO" "Ping (ICMP) allowed through UFW."
+                send_alert "Ping has been allowed through UFW."
+                ;;
+            "dping")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-DENY-PING}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw deny proto icmp
+                log_message "INFO" "Ping (ICMP) denied through UFW."
+                send_alert "Ping has been denied through UFW."
+                ;;
+            "adns")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-ALLOW-DNS}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw allow dns
+                log_message "INFO" "DNS allowed through UFW."
+                send_alert "DNS has been allowed through UFW."
+                ;;
+            "ddns")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-DENY-DNS}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw allow dns
+                log_message "INFO" "DNS Denied through UFW."
+                send_alert "DNS has been Denied through UFW."
+                ;;
+            "asmtp")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-ALLOW-SMTP}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw allow smtp
+                log_message "INFO" "SMTP allowed through UFW."
+                send_alert "SMTP has been allowed through UFW."
+                ;;
+            "dsmtp")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-DENY-SMTP}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw deny smtp
+                log_message "INFO" "SMTP denied through UFW."
+                send_alert "SMTP has been denied through UFW."
+                ;;
+            "apop3")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-ALLOW-POP3}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw allow pop3
+                log_message "INFO" "POP3 allowed through UFW."
+                send_alert "POP3 has been allowed through UFW."
+                ;;
+            "dpop3")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-DENY-POP3}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw Deny pop3
+                log_message "INFO" "POP3 denied through UFW."
+                send_alert "POP3 has been denied through UFW."
+                ;;
+            "aimap")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-ALLOW-IMAP}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw allow imap
+                log_message "INFO" "IMAP allowed through UFW."
+                send_alert "IMAP has been allowed through UFW."
+                ;;
+            "dimap")
+                echo -e "\033[1;32m"
+                echo "<<==={UFW-DENY-IMAP}===>>"
+                echo -e "\033[0m"  # Reset color
+                sudo ufw deny imap
+                log_message "INFO" "IMAP denied through UFW."
+                send_alert "IMAP has been denied through UFW."
+                ;;
+            "clear")
+                clear
+                ;;
+            "banner")
+                display_banner
+                ;;
+            "dstyle")
+                display_fuck_banner1
+                ;;
+            "bjob")
+                display_blowjob_banner
+                ;;
+            "help")
+                echo -e "\033[1;33m" "\n        GLOBAL HELP (GH): \033[0m"
+                echo -e "\033[1;32m"
+                echo "     >>>   1. ls        - List avaliable security tools in this framework"
+                echo "     >>>   2. cd        - To enter New Choosen Section (cd ffuf)"
+                echo "     >>>   3. cd ..     - To get back from one section to HOME menu (If 'cd ..' is not working then use 'exit' command)"
+                echo "     >>>   4. clear     - Clear the terminal"
+                echo "     >>>   5. exit      - Exit the command interface"
+                echo "     >>>   6. banner    - To show the banner"
+                echo "     >>>   7. dstyle    - Just enjoy Indian hackers (Fun purpose)"
+                echo "     >>>   8. bjob      - Just enjoy Indian Hackers (Fun purpose)"
+                echo "     >>>   9. mip       - Show your public IP address (JUST USE 'mip' DON'T USE 'cd mip')"
+                echo -e "\033[1;31m"  # Red color
+                echo ">> By pressing CTRL+C the whole script stops (BE CAREFULL)"
+                echo ">> If you see any warning while useing 'cd ..' then check your section name or execute 'exit' command to exit from the section."
+                echo -e "\033[0m"  # Reset color
+                ;;
+            "ls")
+                echo -e "\033[1;32m" "Available Options (AO):"
+                echo "     >>>   1.  enable    - Enable UFW"
+                echo "     >>>   2.  disable   - Disable UFW"
+                echo "     >>>   3.  assh      - Allow SSH"
+                echo "     >>>   4.  dssh      - Deny SSH"
+                echo "     >>>   5.  ahttp     - Allow HTTP"
+                echo "     >>>   6.  dhttp     - Deny HTTP"
+                echo "     >>>   7.  ahttps    - Allow HTTPS"
+                echo "     >>>   8.  dhttps    - Deny HTTPS"
+                echo "     >>>   9.  aftp      - Allow FTP "
+                echo "     >>>  10.  dftp      - Deny FTP "
+                echo "     >>>  11.  aping     - Allow Ping (ICMP)"
+                echo "     >>>  12.  dping     - Deny Ping (ICMP)"
+                echo "     >>>  13.  adns      - Allow DNS "
+                echo "     >>>  14.  ddns      - Deny DNS "
+                echo "     >>>  15.  asmtp     - Allow SMTP"
+                echo "     >>>  16.  dsmtp     - Deny SMTP"
+                echo "     >>>  17.  apop3     - Allow POP3"
+                echo "     >>>  18.  dpop3     - Deny P0P3"
+                echo "     >>>  19.  aimap     - Allow IMAP"
+                echo "     >>>  20.  dimap     - Deny IAMP"
+                echo "     >>>  21.  deny-all  - Deny all Internet Traffic"
+                echo "     >>>  22.  den-in    - Deny all incoming Traffic"
+                echo "     >>>  23.  alw-out   - Allow Outgoing Traffic"
+                echo "     >>>  24.  den-out   - Deny Outgoing Traffic"
+                echo "     >>>  25.  urest     - Reset the UFW and take it to normal"
+                echo "     >>>  26.  uload     - Reload the UFW "
+                echo "     >>>  27.  statv     - Show UFW status in verbose."
+                echo "     >>>  28.  statn     - Show UFW status in numbered."
+                echo -e "\033[0m"  # Reset color
+                ;;
+            "cd ..")
+                return
+                ;;
+            *)
+                echo "-->> Invalid Command. Please use 'show' to see the commands."
                 ;;
         esac
 

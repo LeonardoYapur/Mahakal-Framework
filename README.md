@@ -181,4 +181,5 @@ MIT License — Free to use, modify, and distribute with credit.
 <p align="center">
   ⚡ Built with ❤️ by <b>CYBER-MRINAL</b> ⚡<br>
   <i>Indian Cybersecurity Engineer • Red Team • Blue Team • Sanatani</i>
+  <i>Can i get a star (⭐) & follow (🔔) for my work ?</i>
 </p>
