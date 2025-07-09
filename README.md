@@ -31,7 +31,7 @@
 
 | Type              | Tools Integrated |
 |-------------------|------------------|
-| 🧠 AI Assistant    | Local AI CLI support (`cd ai`). You can install `ai` from the tool |
+| 🧠 AI Assistant    | Local AI CLI support (`cd ai`). You can install `ai` from the tool (HERE YOU CAN INSTALL AI USING `intdeb` OR `intarch` IN `MAHAKAL` SCRIPT) |
 | 🌐 Recon Tools     | `nmap`, `whatweb`, `subfinder`, `dnsrecon`, `whois`, etc. |
 | 💣 Web Scanners    | `wpscan`, `nikto`, `ffuf`, `gobuster` |
 | 🔓 Cracking Tools  | `hydra`, `john`, `hashcat`, `medusa` |
@@ -81,7 +81,10 @@ sudo ./setup.sh
 After install:
 
 ```bash
-mahakal
+mahakal (If you install system wide)
+  or
+chmod +x mahakal.sh 
+sudo ./mahakal.sh (For manual usecase)
 ```
 
 You’ll be dropped into a futuristic hacker CLI. Use commands like:
@@ -106,7 +109,7 @@ ls
 ## 📁 Modules Available
 
 ```shell
-📁 ai         - Chat with AI module
+📁 ai         - Chat with AI module (HERE YOU CAN INSTALL AI USING `intdeb` OR `intarch` IN SCRIPT)
 📁 nmap       - Network scanner
 📁 wpscan     - WordPress vulnerability scanner
 📁 whatweb    - Website tech fingerprinting
