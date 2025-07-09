@@ -32,7 +32,7 @@
 | Type              | Tools Integrated |
 |-------------------|------------------|
 | 🧠 AI Assistant    | Local AI CLI support (`cd ai`). You can install `ai` from the tool (HERE YOU CAN INSTALL AI USING `intdeb` OR `intarch` IN `MAHAKAL` SCRIPT) |
-| 🌐 Recon Tools     | `nmap`, `whatweb`, `subfinder`, `dnsrecon`, `whois`, etc. |
+| 🌐 Recon Tools     | `nmap`, `whatweb`, `subfinder`, `dnsrecon`, `whois`, `shodan`, etc. |
 | 💣 Web Scanners    | `wpscan`, `nikto`, `ffuf`, `gobuster` |
 | 🔓 Cracking Tools  | `hydra`, `john`, `hashcat`, `medusa` |
 | 🧪 Injection Tools | `sqlmap` |
