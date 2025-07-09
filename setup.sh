@@ -68,10 +68,11 @@ install_missing_packages() {
     # Additional Tool Installations
     if [[ "$distro" == "garuda" || "$distro" == "arch" || "$distro" == "manjaro" || "$distro" == "artix" || "$distro" == "athenaos" ]]; then
         if ! command -v torctl >/dev/null 2>&1; then
-            log " >> Installing torctl for Arch-based system..."
+            log " >> Installing torctl & shodan for Arch-based system..."
             $PKG_INSTALL torctl
+            $PKG_INSTALL python-shodan
         else
-            log " >> torctl already installed."
+            log " >> torctl & shodan already installed."
         fi
     fi
 

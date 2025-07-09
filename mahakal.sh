@@ -263,6 +263,11 @@ run_user_commands() {
                 manage_sqlmap_commands
                 current_section="HOME"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="HOME"
+                ;;
             "cd ai")
                 current_section="AI"
                 chat_ai
@@ -327,7 +332,8 @@ run_user_commands() {
                 echo "     >>>  24.  unic        - Unicornscan for network scanning"
                 echo "     >>>  25.  enumli      - Enumeration tool for Linux systems"
                 echo "     >>>  26.  sqlmap      - SQL injection and database takeover tool"  
-                echo "     >>>  27.  ufw         - Manage firewall rules"           
+                echo "     >>>  27.  ufw         - Manage firewall rules"   
+                echo "     >>>  28.  shodan      - Shodan for searching the internet"        
                 echo -e "\033[1;31m" "\n->> Usage: cd ai (TO ENTER AI SECTION) \033[0m" # Red color
                 echo ""
                 ;;
@@ -513,6 +519,11 @@ manage_nmap_commands() {
             "cd ufw")
                 current_section="UFW"
                 manage_firewall
+                current_section="NMAP"
+                ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
                 current_section="NMAP"
                 ;;
         esac
@@ -894,6 +905,11 @@ manage_curl_commands() {
                 manage_firewall
                 current_section="CURL"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="CURL"
+                ;;
         esac
 
         case $cmd in
@@ -1189,6 +1205,11 @@ manage_wpscan_commands() {
                 manage_firewall
                 current_section="WPSCAN"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="WPSCAN"
+                ;;
         esac
 
         case $cmd in
@@ -1482,6 +1503,11 @@ manage_whatweb_commands() {
                 manage_firewall
                 current_section="WHATWEB"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="WHATWEB"
+                ;;
         esac
 
         case $cmd in
@@ -1760,6 +1786,11 @@ manage_wafw00f_commands() {
                 manage_firewall
                 current_section="WAFW00F"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="WAFW00F"
+                ;;
         esac
 
         case $cmd in
@@ -2001,6 +2032,11 @@ manage_dnsrecon_commands() {
             "cd ufw")
                 current_section="UFW"
                 manage_firewall
+                current_section="DNSRECON"
+                ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
                 current_section="DNSRECON"
                 ;;
         esac
@@ -2255,6 +2291,11 @@ manage_dnsenum_commands() {
             "cd ufw")
                 current_section="UFW"
                 manage_firewall
+                current_section="DNSENUM"
+                ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
                 current_section="DNSENUM"
                 ;;
         esac 
@@ -2524,6 +2565,11 @@ manage_subfinder_commands() {
             "cd ufw")
                 current_section="UFW"
                 manage_firewall
+                current_section="SUBFINDER"
+                ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
                 current_section="SUBFINDER"
                 ;;
         esac
@@ -3277,6 +3323,11 @@ manage_amass_commands() {
                 manage_firewall
                 current_section="AMASS"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="AMASS"
+                ;;
         esac
 
         case $cmd in
@@ -3488,6 +3539,11 @@ manage_hydra_commands() {
                 manage_firewall
                 current_section="HYDRA"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="HYDRA"
+                ;;
         esac
 
         case $cmd in
@@ -3690,6 +3746,11 @@ manage_medusa_commands() {
                 manage_firewall
                 current_section="MEDUSA"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="MEDUSA"
+                ;;
         esac
 
         case $cmd in
@@ -3889,6 +3950,11 @@ manage_john_commands() {
             "cd ufw")
                 current_section="UFW"
                 manage_firewall
+                current_section="JOHN"
+                ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
                 current_section="JOHN"
                 ;;
         esac
@@ -4137,6 +4203,11 @@ manage_hashcat_commands() {
                 manage_firewall
                 current_section="HASHCAT"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="HASHCAT"
+                ;;
         esac
 
         case $cmd in
@@ -4382,6 +4453,11 @@ manage_gobuster_commands() {
                 manage_firewall
                 current_section="GOBUSTER"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="GOBUSTER"
+                ;;
         esac
 
         case $cmd in
@@ -4602,6 +4678,11 @@ manage_ffuf_commands() {
                 manage_firewall
                 current_section="FFUF"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="FFUF"
+                ;;
         esac
 
         case $cmd in
@@ -4808,6 +4889,11 @@ manage_nikto_commands() {
             "cd ufw")
                 current_section="UFW"
                 manage_firewall
+                current_section="NIKTO"
+                ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
                 current_section="NIKTO"
                 ;;
         esac
@@ -5075,6 +5161,11 @@ manage_masscan_commands() {
                 manage_firewall
                 current_section="MASSCAN"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="MASSCAN"
+                ;;
         esac
 
         case $cmd in
@@ -5297,6 +5388,11 @@ manage_unicornscan_commands() {
                 manage_firewall
                 current_section="UNICORNSCAN"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="UNICORNSCAN"
+                ;;
         esac
 
         case $cmd in
@@ -5494,6 +5590,11 @@ manage_enum4linux_commands() {
             "cd ufw")
                 current_section="UFW"
                 manage_firewall
+                current_section="ENUM4LINUX-NG"
+                ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
                 current_section="ENUM4LINUX-NG"
                 ;;
         esac
@@ -5713,6 +5814,11 @@ manage_sqlmap_commands() {
                 manage_firewall
                 current_section="SQLMAP"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="SQLMAP"
+                ;;
         esac
 
         case $cmd in
@@ -5878,6 +5984,312 @@ manage_sqlmap_commands() {
     done
 }
 
+manage_shodan_commands() {
+    local current_section="SHODAN"
+    [[ -f "$HISTORY_FILE" ]] && history -r "$HISTORY_FILE"
+
+    while true; do
+        read -e -p "$(echo -e "\033[1;31m($(date +"%I:%M:%S %p"))\033[1;34m-(MAHAKAL)\033[0m-(${current_section})> ")" input
+        [[ "$input" == "exit" ]] && break
+        [[ -z "$input" ]] && continue
+        history -s "$input"
+        local cmd=$(echo "$input" | awk '{print $1}')
+        local args=$(echo "$input" | cut -d' ' -f2-)
+
+        # Section navigation
+        case $input in
+            "cd ..") 
+                return 
+                ;;
+            "cd nmap")
+                current_section="NMAP"
+                manage_nmap_commands
+                current_section="SHODAN"
+                ;;
+            "cd curl")
+                current_section="CURL"
+                manage_curl_commands
+                current_section="SHODAN"
+                ;;
+            "cd whatweb")
+                current_section="WHATWEB"
+                manage_whatweb_commands
+                current_section="SHODAN"
+                ;;
+            "cd wpscan")
+                current_section="WPSCAN"
+                manage_wpscan_commands
+                current_section="SHODAN"
+                ;;
+            "cd waf")
+                current_section="WAFW00F"
+                manage_wafw00f_commands
+                current_section="SHODAN"
+                ;;
+            "cd subfinder")
+                current_section="SUBFINDER"
+                manage_subfinder_commands
+                current_section="SHODAN"
+                ;;
+            "cd dnsrecon")
+                current_section="DNSRECON"
+                manage_dnsrecon_commands
+                current_section="SHODAN"
+                ;;
+            "cd dnsenum")
+                current_section="DNSENUM"
+                manage_dnsenum_commands
+                current_section="SHODAN"
+                ;;
+            "cd httprobe")
+                current_section="HTTPROBE"
+                manage_httprobe_commands
+                current_section="SHODAN"
+                ;;
+            "cd whois")
+                current_section="WHOIS"
+                manage_whois_commands
+                current_section="SHODAN"
+                ;;
+            "cd amass")
+                current_section="AMASS"
+                manage_amass_commands
+                current_section="SHODAN"
+                ;;
+            "cd hydra")
+                current_section="HYDRA"
+                manage_hydra_commands
+                current_section="SHODAN"
+                ;;
+            "cd medusa")
+                current_section="MEDUSA"
+                manage_medusa_commands
+                current_section="SHODAN"
+                ;;
+            "cd john")
+                current_section="JOHN"
+                manage_john_commands
+                current_section="SHODAN"
+                ;;
+            "cd hashcat")
+                current_section="HASHCAT"
+                manage_hashcat_commands
+                current_section="SHODAN"
+                ;;
+            "cd gobuster")
+                current_section="GOBUSTER"
+                manage_gobuster_commands
+                current_section="SHODAN"
+                ;;
+            "cd ffuf")
+                current_section="FFUF"
+                manage_ffuf_commands
+                current_section="SHODAN"
+                ;;
+            "cd nikto")
+                current_section="NIKTO"
+                manage_nikto_commands
+                current_section="SHODAN"
+                ;;
+            "cd masscan")
+                current_section="MASSCAN"
+                manage_masscan_commands
+                current_section="SHODAN"
+                ;;
+            "cd unic")
+                current_section="UNICORNSCAN"
+                manage_unicornscan_commands
+                current_section="SHODAN"
+                ;;
+            "cd enumli")
+                current_section="ENUM4LINUX"
+                manage_enum4linux_commands
+                current_section="SHODAN"
+                ;;
+            "cd sqlmap")
+                current_section="SQLMAP"
+                manage_sqlmap_commands
+                current_section="SHODAN"
+                ;;
+            "cd ai")
+                current_section="AI"
+                chat_ai
+                current_section="SHODAN"
+                ;;
+            "cd css")
+                current_section="CSS"
+                check_sys_status
+                current_section="SHODAN"
+                ;;
+            "cd anony")
+                current_section="ANONY"
+                traffic_anony
+                current_section="SHODAN"
+                ;;
+            "cd ufw")
+                current_section="UFW"
+                manage_firewall
+                current_section="SHODAN"
+                ;;           
+        esac
+
+        case $cmd in
+            ls)
+                echo -e "\033[1;33m\n       SHODAN FULL COMMAND LIST:\033[0m"
+                echo -e "\033[1;32m"
+                echo "     >>>  init [API_KEY]                   - Initialize Shodan API key"
+                echo "     >>>  info                             - Show your Shodan account info"
+                echo "     >>>  myip                             - Show your public IP"
+                echo "     >>>  host [IP]                        - Get all info on a host"
+                echo "     >>>  domain [domain.com]              - View domain information"
+                echo "     >>>  honeyscore [IP]                  - Check if IP is honeypot"
+                echo "     >>>  search [query]                   - Search the Shodan database"
+                echo "     >>>  count [query]                    - Count the number of results"
+                echo "     >>>  scan [target/netblock]           - Initiate a scan from Shodan"
+                echo "     >>>  radar                            - Real-time map view"
+                echo "     >>>  trends [query]                   - Historical trends"
+                echo "     >>>  stats [query]                    - Query summary statistics"
+                echo "     >>>  ports                            - List known ports"
+                echo "     >>>  protocols                        - List supported protocols"
+                echo "     >>>  services                         - List your Shodan services"
+                echo "     >>>  alert list                       - Show all configured alerts"
+                echo "     >>>  alert create [name] [ip/cidr]    - Create new alert"
+                echo "     >>>  alert delete [id]                - Delete an alert"
+                echo "     >>>  alert enable [id]                - Enable an alert"
+                echo "     >>>  alert disable [id]               - Disable an alert"
+                echo "     >>>  data                             - Access bulk datasets"
+                echo "     >>>  convert [file]                   - Convert Shodan JSON to CSV"
+                echo "     >>>  download [query] [file]          - Save results to compressed JSON"
+                echo "     >>>  parse [file]                     - Parse saved search result files"
+                echo "     >>>  stream                           - Stream real-time results"
+                echo "     >>>  version                          - Display CLI version"
+                echo "     >>>  org                              - Manage organization access"
+                echo "     >>>  custom [args]                    - Run any custom Shodan CLI"
+                echo -e "\033[0m"
+                ;;
+            init) 
+                shodan init $args 
+                ;;
+            info) 
+                shodan info 
+                ;;
+            myip) 
+                shodan myip 
+                ;;
+            host) 
+                shodan host $args 
+                ;;
+            domain) 
+                shodan domain $args 
+                ;;
+            honeyscore) 
+                shodan honeyscore $args 
+                ;;
+            search) 
+                shodan search "$args" 
+                ;;
+            count) 
+                shodan count "$args" 
+                ;;
+            scan) 
+                shodan scan $args 
+                ;;
+            radar) 
+                shodan radar 
+                ;;
+            trends) 
+                shodan trends "$args" 
+                ;;
+            stats) 
+                shodan stats "$args" 
+                ;;
+            ports) 
+                shodan ports 
+                ;;
+            protocols) 
+                shodan protocols 
+                ;;
+            services) 
+                shodan services 
+                ;;
+            alert)
+                subcmd=$(echo "$args" | awk '{print $1}')
+                alert_args=$(echo "$args" | cut -d' ' -f2-)
+                case $subcmd in
+                    list) shodan alert list ;;
+                    create) shodan alert create $alert_args ;;
+                    delete) shodan alert delete $alert_args ;;
+                    enable) shodan alert enable $alert_args ;;
+                    disable) shodan alert disable $alert_args ;;
+                    *) echo -e "\033[1;31m-->> Invalid alert subcommand. Use: list/create/delete/enable/disable\033[0m" ;;
+                esac
+                ;;
+            data) 
+                shodan data 
+                ;;
+            convert)
+                shodan convert $args 
+                ;;
+            download) 
+                shodan download $args 
+                ;;
+            parse) 
+                shodan parse $args 
+                ;;
+            stream) 
+                shodan stream 
+                ;;
+            version) 
+                shodan version 
+                ;;
+            org) 
+                shodan org $args 
+                ;;
+            custom) 
+                shodan $args 
+                ;;
+            clear) 
+                clear 
+                ;;
+            banner) 
+                display_banner 
+                ;;
+            dstyle) 
+                display_fuck_banner1 
+                ;;
+            bjob) 
+                display_blowjob_banner 
+                ;;
+            mip)
+                echo -e "\033[1;32mYour IP address is: $(curl -s ifconfig.me)\033[0m"
+                log_message "INFO" "User checked IP address"
+                ;;
+            "help")
+                echo -e "\033[1;33m" "\n        GLOBAL HELP (GH): \033[0m"
+                echo -e "\033[1;32m"
+                echo "     >>>   1. ls        - List avaliable security tools in this framework"
+                echo "     >>>   2. cd        - To enter New Choosen Section (cd ffuf)"
+                echo "     >>>   3. cd ..     - To get back from one section to HOME menu (If 'cd ..' is not working then use 'exit' command)"
+                echo "     >>>   4. clear     - Clear the terminal"
+                echo "     >>>   5. exit      - Exit the command interface"
+                echo "     >>>   6. banner    - To show the banner"
+                echo "     >>>   7. dstyle    - Just enjoy Indian hackers (Fun purpose)"
+                echo "     >>>   8. bjob      - Just enjoy Indian Hackers (Fun purpose)"
+                echo "     >>>   9. mip       - Show your public IP address (JUST USE 'mip' DON'T USE 'cd mip')"
+                echo -e "\033[1;31m"  # Red color
+                echo ">> By pressing CTRL+C the whole script stops (BE CAREFULL)"
+                echo ">> If you see any warning while useing 'cd ..' then check your section name or execute 'exit' command to exit from the section."
+                echo -e "\033[0m"  # Reset color
+                ;;
+            *)
+                echo -e "\033[1;31m-->> Invalid command. Use 'ls' or 'help'.\033[0m"
+                ;;
+        esac
+
+        history -a "$HISTORY_FILE"
+    done
+}
+
 # Function to chat or work with ai
 chat_ai() {
     local current_section="AI"
@@ -6036,6 +6448,11 @@ chat_ai() {
             "cd ufw")
                 current_section="UFW"
                 manage_firewall
+                current_section="AI"
+                ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
                 current_section="AI"
                 ;;
         esac
@@ -6388,6 +6805,11 @@ check_sys_status() {
                 manage_firewall
                 current_section="CSS"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="CSS"
+                ;;
         esac
 
         case $option in
@@ -6721,6 +7143,11 @@ traffic_anony() {
                 manage_firewall
                 current_section="ANONY"
                 ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
+                current_section="ANONY"
+                ;;
         esac
 
         case $option in
@@ -7030,6 +7457,11 @@ manage_firewall() {
             "cd anony")
                 current_section="ANONY"
                 traffic_anony
+                current_section="UFW"
+                ;;
+            "cd shodan")
+                current_section="SHODAN"
+                manage_shodan_commands
                 current_section="UFW"
                 ;;
         esac

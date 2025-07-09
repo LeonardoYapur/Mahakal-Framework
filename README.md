@@ -51,7 +51,6 @@ cd Mahakal-Framework
 chmod +x setup.sh
 sudo ./setup.sh
 ````
-
 🧩 During setup:
 
 * 🧠 Auto-detects your Linux distro
@@ -63,6 +62,7 @@ sudo ./setup.sh
   * `kali-anonsurf` (for Debian-based)
 
 ---
+- If you getting shodan not found error then for debian based distro install `python3-shodan` and for arch based distro install `python-shodan`.
 
 ## 💻 Supported OS
 
@@ -128,6 +128,8 @@ ls
 📁 medusa     - Parallel password bruteforcer
 📁 css        - Check system status
 📁 anony      - Anonymity controls
+📁 shodan     - Shodan based search for osint
+📁 ufw        - Uncomplecated firewall management
 ```
 
 ---
