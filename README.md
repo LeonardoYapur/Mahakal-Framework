@@ -113,25 +113,32 @@ ls
 ```shell
 📁 ai         - Chat with AI module ( INSTALL AI USING `intdeb` OR `intarch` USING SCRIPT)
 📁 nmap       - Network scanner
-📁 wpscan     - WordPress vulnerability scanner
-📁 whatweb    - Website tech fingerprinting
-📁 nikto      - Web server scanner
-📁 gobuster   - Directory brute-forcing
-📁 ffuf       - Fuzzing URLs
-📁 dnsrecon   - DNS recon
-📁 dnsenum    - DNS enum
-📁 subfinder  - Subdomain enumeration
-📁 masscan    - High-speed port scanner
-📁 sqlmap     - SQL Injection automation
-📁 enumli     - Linux enumeration
-📁 hashcat    - Hash cracking
-📁 john       - Password cracker
-📁 hydra      - Login brute-forcer
-📁 medusa     - Parallel password bruteforcer
 📁 css        - Check system status
 📁 anony      - Anonymity controls
-📁 shodan     - Shodan based search for osint
-📁 ufw        - Uncomplecated firewall management
+📁 curl       - Curl use for recon purpose
+📁 whatweb    - Website tech fingerprinting
+📁 wpscan     - WordPress vulnerability scanner
+📁 wafw00f    - WAFW00F for web application firewall detection 
+📁 subfinder  - Subdomain enumeration
+📁 dnsrecon   - DNS recon
+📁 dnsenum    - DNS enum
+📁 httprobe   - HTTP probing tool
+📁 mip        - Show your public IP address
+📁 whois      - Perform a WHOIS lookup
+📁 amass      - Amass for DNS enumeration
+📁 hydra      - Login brute-forcer
+📁 medusa     - Parallel password bruteforcer
+📁 gobuster   - Directory brute-forcing
+📁 hashcat    - Hash cracking
+📁 john       - Password cracker
+📁 nikto      - Web server scanner
+📁 masscan    - High-speed port scanner
+📁 ffuf       - Fuzzing URLs
+📁 unic       - Unicornscan for network scanning
+📁 enumli     - Linux enumeration
+📁 sqlmap     - SQL Injection automation
+📁 ufw        - Uncomplicated firewall management
+📁 shodan     - Shodan for searching the internet
 ```
 
 ---
