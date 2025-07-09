@@ -6882,7 +6882,7 @@ manage_firewall() {
 
     while true; do
         # Read input with readline support
-        read -e -p " {LINUX-DEFENDER}-{${current_section}}-->> " option
+        read -e -p "$(echo -e "\033[1;31m($(date +"%I:%M:%S %p"))\033[1;34m-(MAHAKAL)\033[0m-(${current_section})> ")" option
 
         # Exit the loop if the user types 'exit'
         if [[ "$option" == "exit" ]]; then
