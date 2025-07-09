@@ -7316,7 +7316,9 @@ manage_firewall() {
                 return
                 ;;
             *)
-                echo "-->> Invalid Command. Please use 'show' to see the commands."
+                echo -e "\033[1;31m"
+                echo "-->> Invalid Command. Please use 'help/ls' to see the commands."
+                echo -e "\033[0m"  # Reset color
                 ;;
         esac
 
