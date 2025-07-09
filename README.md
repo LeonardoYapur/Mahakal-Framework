@@ -163,6 +163,10 @@ MIT License — Free to use, modify, and distribute with credit.
 
 ---
 
+![image](https://github.com/user-attachments/assets/4fadce5d-ae95-4dea-a259-b6402c28e91d)
+
+
+--- 
 ## ⚡ Connect with Me
 
 | Platform    | Link                                                                         |
