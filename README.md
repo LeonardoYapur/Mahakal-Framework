@@ -72,7 +72,7 @@ sudo ./setup.sh
 | Ubuntu / Debian | ✅ Supported     |
 | Linux Mint      | ✅ Supported     |
 | Arch / Garuda / Athena os   | ✅ Supported     |
-| Parrot OS       | ✅ Not Supported |
+| Parrot OS       | ✅ Supported |
 
 ---
 
@@ -109,7 +109,7 @@ ls
 ## 📁 Modules Available
 
 ```shell
-📁 ai         - Chat with AI module (HERE YOU CAN INSTALL AI USING `intdeb` OR `intarch` IN SCRIPT)
+📁 ai         - Chat with AI module ( INSTALL AI USING `intdeb` OR `intarch` USING SCRIPT)
 📁 nmap       - Network scanner
 📁 wpscan     - WordPress vulnerability scanner
 📁 whatweb    - Website tech fingerprinting
