@@ -146,7 +146,7 @@ main() {
     
     echo -e "\033[1;33m"
     echo "      ✅ Setup complete Jai Mahakal...."
-    echo "      'AI' you can install using 'mahakal' script just do this -> 'cd ai' & 'intdeb' or for arch 'intarch'"
+    echo "'AI' you can install using 'mahakal' script just do this -> 'cd ai' & 'intdeb' or for arch 'intarch'"
     log "<==== SETUP COMPLETE ====>"
     echo -e "\033[0m"
 }
