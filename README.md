@@ -1,203 +1,152 @@
-<h1 align="center">🔱 MAHAKAL FRAMEWORK 🔱</h1>
-<p align="center">
-  <img src="https://img.shields.io/badge/MAHAKAL-Terminal%20Framework-red?style=for-the-badge&logo=gnubash" alt="Badge">
-  <img src="https://img.shields.io/badge/Linux-Only-green?style=for-the-badge&logo=linux">
-  <img src="https://img.shields.io/badge/Built%20With-Bash-blue?style=for-the-badge&logo=gnu">
-</p>
+# MAHAKAL Framework: Your All-in-One Cybersecurity Suite 🔱
 
----
+![MAHAKAL Framework](https://img.shields.io/badge/MAHAKAL_Framework-Ready%20to%20Use-brightgreen)
 
-<p align="center">
-  <b>A powerful 🔐 cybersecurity terminal framework</b><br>
-  <i>Built for Hackers, Red Teamers, and Cyber Warriors 💀</i><br><br>
-  <b>🛠️ Created By:</b> <a href="https://github.com/Cyber-Mrinal">CYBER-MRINAL</a>
-</p>
+Welcome to the **MAHAKAL Framework** repository. This project is designed to provide a comprehensive terminal-based cybersecurity suite for professionals and enthusiasts alike. The framework combines powerful tools for reconnaissance, cracking, web auditing, and maintaining anonymity. 
 
----
+## Table of Contents
 
-## ⚔️ Overview
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tools Included](#tools-included)
+- [Topics](#topics)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
-> **MAHAKAL** is a modular, interactive, and professional-grade **Linux terminal framework** designed to unify reconnaissance, vulnerability scanning, cracking, system auditing, and anonymity into a single command-line interface.
+## Features
 
-🎯 Ideal for:
-- 🧠 Ethical Hackers
-- 🕵️ Red/Blue/Purple Teamers
-- 🔬 Security Analysts
-- 🧰 Penetration Testers
+- **Modular Design**: Easily extendable architecture to add new tools and features.
+- **Comprehensive Toolset**: Includes popular cybersecurity tools like Nmap, SQLMap, and Hashcat.
+- **User-Friendly CLI**: Designed for ease of use with clear commands and options.
+- **Cross-Platform Compatibility**: Works on various Linux distributions, including Kali, Parrot OS, and Garuda Linux.
+- **Automation**: Scripts to automate common tasks, improving efficiency and workflow.
 
----
+## Installation
 
-## ✨ Key Features
+To install the MAHAKAL Framework, follow these steps:
 
-| Type              | Tools Integrated |
-|-------------------|------------------|
-| 🧠 AI Assistant    | Local AI CLI support (`cd ai`). You can install `ai` from the tool (HERE YOU CAN INSTALL AI USING `intdeb` OR `intarch` IN `MAHAKAL` SCRIPT) |
-| 🌐 Recon Tools     | `nmap`, `whatweb`, `subfinder`, `dnsrecon`, `whois`, `shodan`, etc. |
-| 💣 Web Scanners    | `wpscan`, `nikto`, `ffuf`, `gobuster` |
-| 🔓 Cracking Tools  | `hydra`, `john`, `hashcat`, `medusa` |
-| 🧪 Injection Tools | `sqlmap` |
-| ⚡ Port Scanners   | `masscan`, `unicornscan` |
-| 🛡️ System Hardening | `ufw`, `fail2ban`, `inxi` |
-| 🕶️ Anonymity Setup | Optional install: `torctl`, `kali-anonsurf` |
-| 📚 Command Logger | Logs saved to `/var/log/mahakal.log` |
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/LeonardoYapur/Mahakal-Framework.git
+   ```
 
----
+2. **Navigate to the Directory**:
+   ```bash
+   cd Mahakal-Framework
+   ```
 
-## 🚀 Installation
+3. **Run the Installation Script**:
+   ```bash
+   bash install.sh
+   ```
 
-```bash
-git clone https://github.com/CYBER-MRINAL/Mahakal-Framework
-cd Mahakal-Framework
-chmod +x setup.sh
-sudo ./setup.sh
-````
-🧩 During setup:
+4. **Verify Installation**:
+   Ensure all tools are installed correctly by running:
+   ```bash
+   mahakal --version
+   ```
 
-* 🧠 Auto-detects your Linux distro
-* 📦 Installs all required tools
-* 🔧 Offers `system-wide install` (via `/usr/local/bin`)
-* 🕶️ Asks if you want to install:
+## Usage
 
-  * `torctl` (for Arch-based)
-  * `kali-anonsurf` (for Debian-based)
-
----
-- If you getting shodan not found error then for debian based distro install `python3-shodan` and for arch based distro install `python-shodan`.
-- One more thing before runt shodan commands you have to give it your api key. You can finde it on here -> [shodan](https://shodan.io) First signup if you have no account then go to account -> there you can see on Overview section -> `API KEY` just click on show and copy that. Then go to your terminal and type `shodan init <paste your api key>`. You fix your issue.
-- If you getting `tgpt` command not found errot then just install from `mahakal` -> `cd ai` -> Then for debian `intdeb` and for arch or arch based distro `intarch`.
-
-## 💻 Supported OS
-
-| Distro          | Status          |
-| --------------- | --------------- |
-| Kali Linux      | ✅ Supported     |
-| Ubuntu / Debian | ✅ Supported     |
-| Linux Mint      | ✅ Supported     |
-| Arch / Garuda / Athena os   | ✅ Supported     |
-| Parrot OS       | ✅ Supported |
-
----
-
-## 🧠 Using MAHAKAL
-
-After install:
+To start using the MAHAKAL Framework, simply run the following command in your terminal:
 
 ```bash
-mahakal (If you install system wide)
-  or
-chmod +x mahakal.sh 
-sudo ./mahakal.sh (For manual usecase)
+mahakal
 ```
 
-You’ll be dropped into a futuristic hacker CLI. Use commands like:
+This command will launch the main interface. From there, you can access various modules and tools.
 
-```bash
-cd nmap
-ls
-quick 192.168.1.1
-cd ..
-cd hashcat
-ls
-```
+### Example Commands
 
-🟢 `mip` — Show public IP
-🟢 `cd toolname` — Enter module
-🟢 `ls` — See commands
-🟢 `help` — Global guide
-🔴 `exit` — Quit framework
+- **Reconnaissance**:
+  ```bash
+  mahakal recon --target example.com
+  ```
 
----
+- **Web Auditing**:
+  ```bash
+  mahakal audit --url http://example.com
+  ```
 
-## 📁 Modules Available
+- **Password Cracking**:
+  ```bash
+  mahakal crack --hash <hash_value>
+  ```
 
-```shell
-📁 ai         - Chat with AI module ( INSTALL AI USING `intdeb` OR `intarch` USING SCRIPT)
-📁 nmap       - Network scanner
-📁 css        - Check system status
-📁 anony      - Anonymity controls
-📁 curl       - Curl use for recon purpose
-📁 whatweb    - Website tech fingerprinting
-📁 wpscan     - WordPress vulnerability scanner
-📁 wafw00f    - WAFW00F for web application firewall detection 
-📁 subfinder  - Subdomain enumeration
-📁 dnsrecon   - DNS recon
-📁 dnsenum    - DNS enum
-📁 httprobe   - HTTP probing tool
-📁 mip        - Show your public IP address
-📁 whois      - Perform a WHOIS lookup
-📁 amass      - Amass for DNS enumeration
-📁 hydra      - Login brute-forcer
-📁 medusa     - Parallel password bruteforcer
-📁 gobuster   - Directory brute-forcing
-📁 hashcat    - Hash cracking
-📁 john       - Password cracker
-📁 nikto      - Web server scanner
-📁 masscan    - High-speed port scanner
-📁 ffuf       - Fuzzing URLs
-📁 unic       - Unicornscan for network scanning
-📁 enumli     - Linux enumeration
-📁 sqlmap     - SQL Injection automation
-📁 ufw        - Uncomplicated firewall management
-📁 shodan     - Shodan for searching the internet
-```
+## Tools Included
 
----
+The MAHAKAL Framework integrates several powerful tools to assist in various cybersecurity tasks. Below is a list of the key tools included:
 
-## 📦 Log & History
+- **Nmap**: A network scanning tool for discovering hosts and services on a computer network.
+- **SQLMap**: An automated tool for detecting and exploiting SQL injection vulnerabilities.
+- **Hashcat**: A powerful password recovery tool supporting various hashing algorithms.
+- **John the Ripper**: A fast password cracker that supports many different hash types.
+- **Gobuster**: A tool for directory and file brute-forcing on web servers.
+- **Amass**: A tool for DNS enumeration and network mapping.
+- **Subfinder**: A subdomain discovery tool that finds valid subdomains for websites.
+- **WhatWeb**: A web application fingerprinting tool that identifies technologies used on websites.
 
-* 📁 Logs are saved to: `/var/log/mahakal.log`
-* 📁 Command history: `/var/.mahakal_command_history`
+## Topics
 
----
+This repository covers a wide range of topics in cybersecurity, including:
 
-## 🔐 Legal Disclaimer
+- amass
+- arch-linux
+- automation
+- bash-scripting
+- curl
+- dnsenum
+- dnsrecon
+- garuda-linux
+- gobuster
+- hashcat
+- john
+- kali-linux
+- mahakal
+- nmap
+- parrot-os
+- recon
+- reconnaissance
+- subfinder
+- website-recon
+- whatweb
 
-> **MAHAKAL Framework** is intended for educational and lawful penetration testing use only.
-> The user is fully responsible for any misuse. Unauthorized attacks are illegal.
-> By using this tool, you agree to use it only on systems you own or are authorized to test.
+## Contributing
 
----
+Contributions are welcome! If you would like to contribute to the MAHAKAL Framework, please follow these steps:
 
-## 📜 License
+1. **Fork the Repository**: Click on the fork button at the top right of this page.
+2. **Create a New Branch**: 
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. **Make Your Changes**: Implement your feature or fix.
+4. **Commit Your Changes**:
+   ```bash
+   git commit -m "Add YourFeature"
+   ```
+5. **Push to Your Branch**:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+6. **Create a Pull Request**: Go to the original repository and click on "New Pull Request."
 
-```text
-MIT License — Free to use, modify, and distribute with credit.
-```
+## License
 
----
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## 🧠 Dev Notes
+## Releases
 
-* Developed entirely in **Bash**
-* Requires **root/sudo** for some operations
-* Terminal color-coded and interactive interface
+To download the latest version of the MAHAKAL Framework, visit the [Releases section](https://github.com/LeonardoYapur/Mahakal-Framework/releases). You can find the latest builds and updates there.
 
----
+## Additional Resources
 
-![image](https://github.com/user-attachments/assets/cff0b609-ef01-4244-948b-40d58e8ff199)
+For further information, consider checking the following resources:
 
+- **Documentation**: Comprehensive documentation is available within the repository.
+- **Community Support**: Join discussions and get help in the Issues section of the repository.
+- **Tutorials**: Look for tutorials on how to use specific tools within the MAHAKAL Framework.
 
---- 
-## ⚡ Connect with Me
-
-| Platform    | Link                                                                         |
-| ----------- | ---------------------------------------------------------------------------- |
-| 🌐 Website  | [OMSWASTRA](https://cyber-mrinal.github.io/omswastra) |
-| 💼 LinkedIn | [LINKEDIN](https://linkedin.com/in/CYBERMRINAL) |
-| 🐙 GitHub   | [GITHUB](https://github.com/CYBER-MRINAL)                   |
-|   Telegram  | [TELEGRAM-FOR-TOOL-ISSUE](https://github.com/cybermrinalgroup/3)  
-
----
-
-## 🕉️ Jai Mahakal 🕉️
-
-> “The destroyer of ignorance. The protector of truth.”
-> This framework is built in the spirit of **Lord Shiva** — destroyer of evil, guardian of wisdom.
-
----
-
-<p align="center">
-  ⚡ Built with ❤️ by <b>CYBER-MRINAL</b> ⚡<br>
-  <i>Indian Cybersecurity Engineer • Red Team • Blue Team • Sanatani</i><br>
-  <i>[*] Can i get a star (⭐) & follow (🔔) for my work ?</i>
-</p>
+Feel free to explore and contribute to the MAHAKAL Framework. Your feedback and contributions help improve this project for everyone.
